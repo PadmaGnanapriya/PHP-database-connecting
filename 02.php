@@ -5,7 +5,7 @@
     $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     echo 'Connected to the database.<br>';
 
-    $sql = "SELECT Name FROM country";
+    $sql = "SELECT Name FROM country WHERE Name like 'S%' LIMIT 5";
 
     $stmt = $conn->prepare($sql);
     $stmt->execute();
